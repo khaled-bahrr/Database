@@ -1,4 +1,5 @@
 LOCK TABLES `product_prices` WRITE;
+SET FOREIGN_KEY_CHECKS=0;
 /*!40000 ALTER TABLE `product_prices` DISABLE KEYS */;
 INSERT INTO `product_prices` VALUES
   (1,'huarache-x-stussy-le','USD',144.69,'$'),
@@ -10,5 +11,8 @@ INSERT INTO `product_prices` VALUES
   (7,'apple-airpods-pro','USD',300.23,'$'),
   (8,'apple-airtag','USD',120.57,'$');
 /*!40000 ALTER TABLE `product_prices` ENABLE KEYS */;
+SET FOREIGN_KEY_CHECKS=1;
 UNLOCK TABLES;
+
+-- import your data here
 

@@ -1,24 +1,3 @@
-DROP TABLE IF EXISTS `product_prices`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-
-CREATE TABLE `product_prices` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `product_id` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `currency` varchar(3) DEFAULT NULL,
-  `price` decimal(10,2) NOT NULL,
-  `symbol` varchar(255) NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `product_id` (`product_id`),
-  CONSTRAINT `product_prices_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `product_prices`
---
-
 LOCK TABLES `product_prices` WRITE;
 /*!40000 ALTER TABLE `product_prices` DISABLE KEYS */;
 INSERT INTO `product_prices` VALUES
